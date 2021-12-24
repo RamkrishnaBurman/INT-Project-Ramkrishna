@@ -51,6 +51,9 @@ import img3 from "./../../Images/3.jpg";
                 </Carousel.Item>
               </Carousel>
             </div>
+            <div className='footer'>
+              <p>© 2025 Ramkrishna’s All rights reserved.</p>
+            </div>
         </div>
     )
         
