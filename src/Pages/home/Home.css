@@ -67,6 +67,8 @@
   background: #2874f0;
   color: #fff;
   text-align: center;
+  position: fixed;
+  bottom: 0;
 }
 .footer p {
   margin: 0;
@@ -76,5 +78,5 @@
 .carousel-control-prev-icon {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
-  background-size: 80%;
+  background-size: 80% !important;
 }
