@@ -55,8 +55,6 @@ const Register= () =>{
                     navigate("/login")
                 }, 6000);
             }
-           
-           
         },[reDirectFlag])
 
     const VarifySubmit= (values) =>  {
@@ -66,7 +64,7 @@ const Register= () =>{
             if(data.uID===values.uID){
                exisi=1;
             }else if(data.uEmail== values.uEmail){
-                exisi=1
+                exisi=2
             }
         })
         if(exisi===0){
