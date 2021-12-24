@@ -49,8 +49,7 @@ const Register= () =>{
             existingUser.push(JSON.parse(bytes.toString(CryptoJS.enc.Utf8))) ;
         })
         if(exisi===0 && reDirectFlag===1) {
-                reDirectFlag=0;  
-               
+                reDirectFlag=0; 
                 toast.success("User successfully registered",{position: toast.POSITION.TOP_CENTER})
                 setTimeout(() => {
                     navigate("/login")
@@ -65,10 +64,8 @@ const Register= () =>{
         var encrypted=CryptoJS.AES.encrypt(precessData, "Ram").toString()
         existingUser.find( data =>{
             if(data.uID===values.uID){
-                toast.error("User ID already exist",{position: toast.POSITION.TOP_CENTER})
-                exisi=1;
+               exisi=1;
             }else if(data.uEmail== values.uEmail){
-                toast.error("Email ID already exist",{position: toast.POSITION.TOP_CENTER})
                 exisi=1
             }
         })
@@ -76,6 +73,12 @@ const Register= () =>{
             reDirectFlag=1;
             return(encrypted);        
         }else{
+            if(exisi===1){
+                toast.error("User ID already exist",{position: toast.POSITION.TOP_CENTER})
+            }else{
+                toast.error("Email ID already exist",{position: toast.POSITION.TOP_CENTER})
+            }
+            exisi=0;
             return null
         }
             
